@@ -6,7 +6,9 @@ function App() {
 
   const callApi = async () => {
     try {
-      const response = await fetch("https://qkropoqjmb.execute-api.us-east-2.amazonaws.com/default/signupHandler");
+      const response = await fetch(
+        "https://qkropoqjmb.execute-api.us-east-2.amazonaws.com/default/signupHandler"
+      );
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
@@ -25,7 +27,7 @@ function App() {
           padding: "10px 20px",
           fontSize: "18px",
           cursor: "pointer",
-          borderRadius: "8px"
+          borderRadius: "8px",
         }}
       >
         Call My Lambda Function
@@ -33,4 +35,7 @@ function App() {
 
       <h2 style={{ marginTop: "30px" }}>{message}</h2>
     </div>
-  )
+  );
+}
+
+export default App;
